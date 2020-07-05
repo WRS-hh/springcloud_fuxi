@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>springcloud_parent</artifactId>
+        <groupId>com.itcast</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>springcloud_order</artifactId>
+
+    <dependencies>
+
+        <dependency>
+            <groupId>com.itcast</groupId>
+            <artifactId>cloud_common</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+
+
+        <!--1. 数据层查询依赖-->
+        <!--1.1 通用mapper 用于集成基础的mybatis操作-->
+        <dependency>
+            <groupId>tk.mybatis</groupId>
+            <artifactId>mapper-spring-boot-starter</artifactId>
+        </dependency>
+        <!--1.2 mysql驱动-->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.github.pagehelper</groupId>
+            <artifactId>pagehelper-spring-boot-starter</artifactId>
+            <version>1.2.10</version>
+        </dependency>
+
+        <!--3. eureka客户端,注册服务-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+        </dependency>
+        <!--4. web依赖,因为eureka客户端没有集成web-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+        </dependency>
+
+        <!--解决 PO和DTO之间的转换-->
+        <!--<dependency>-->
+        <!--<groupId>com.github.dozermapper</groupId>-->
+        <!--<artifactId>dozer-spring-boot-starter</artifactId>-->
+        <!--<version>6.2.0</version>-->
+        <!--</dependency>-->
+
+
+        <!--5. feign,用于服务间的调用 及 调用可能出现问题的回调处理-->
+        <!--<dependency>-->
+        <!--<groupId>org.springframework.cloud</groupId>-->
+        <!--<artifactId>spring-cloud-starter-openfeign</artifactId>-->
+        <!--</dependency>-->
+
+        <!--6. config, 用于服务从中心获取配置文件-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-config</artifactId>
+            <version>2.1.1.RELEASE</version>
+        </dependency>
+
+
+    </dependencies>
+
+</project>

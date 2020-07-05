@@ -1,0 +1,14 @@
+server:
+  port: 9091
+
+spring:
+  application:
+    name: order-server
+
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/cloud_order
+    username: root
+    password: root
+
+
