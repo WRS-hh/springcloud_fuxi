@@ -12,6 +12,7 @@
         <module>springcloud_order</module>
         <module>springcloud_common</module>
         <module>springcloud_user</module>
+        <module>springcloud_registry</module>
     </modules>
 
     <parent>

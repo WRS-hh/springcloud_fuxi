@@ -1,0 +1,14 @@
+server:
+  port: 8761
+
+eureka:
+  client:
+    fetch-registry: false  #是否从注册中心拉取服务, 默认为true
+    register-with-eureka: false #是否注册自己为服务,默认为true
+    service-url:
+      defaultZone: http://localhost:${server.port}/eureka/  # 单机链接
+
+spring:
+  application:
+    name: eureka-center-server
+    #如果注册到中心后的服务名称,规则:①唯一 ②不能含有"_"下划线 ③一般为模块名 ④不区分大小写
