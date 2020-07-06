@@ -7,7 +7,7 @@ spring:
 
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://192.168.200.1:3306/cloud_order
+    url: jdbc:mysql://127.0.0.1:3306/cloud_order
     username: root
     password: root
 
@@ -16,6 +16,5 @@ eureka:
     fetch-registry: true  #是否从注册中心拉取服务
     register-with-eureka: true  #是否注册自己为服务
     service-url:
-      defaultZone: http://localhost:${server.port}/eureka/  #单机链接
-
+      defaultZone: http://localhost:8761/eureka/  #单机链接
 

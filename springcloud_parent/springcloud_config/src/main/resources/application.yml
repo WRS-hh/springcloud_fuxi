@@ -1,0 +1,35 @@
+server:
+  port: 12000
+
+spring:
+  application:
+    name: config-server
+
+  cloud:  #注意这里也是写在spring旗下的,不可另起,只能写这
+    config:
+      server:
+        git:
+          uri: https://gitee.com/jitheima/cloud_config.git  #gitee放配置文件仓库的克隆url
+  #          username:
+  #          password:
+  # 添加1: 配置rabbitmq信息；如果是都与默认值一致则不需要配置
+  rabbitmq:
+    host: 192.168.200.129
+    port: 5672
+    username: guest
+    password: guest
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:8761/eureka/
+
+#添加2: 暴露总线
+management:
+  endpoints:
+    web:
+      exposure:
+        # 暴露触发消息总线的地址
+        include: bus-refresh
+
+

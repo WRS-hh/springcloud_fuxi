@@ -61,7 +61,6 @@
             <version>6.2.0</version>
         </dependency>
 
-
         <!--5. feign,用于服务间的调用 及 调用可能出现问题的回调处理-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
