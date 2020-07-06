@@ -11,4 +11,11 @@ spring:
     username: root
     password: root
 
+eureka:
+  client:
+    fetch-registry: true  #是否从注册中心拉取服务
+    register-with-eureka: true  #是否注册自己为服务
+    service-url:
+      defaultZone: http://localhost:${server.port}/eureka/  #单机链接
+
 
