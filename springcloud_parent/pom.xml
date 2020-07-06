@@ -11,6 +11,7 @@
     <modules>
         <module>springcloud_order</module>
         <module>springcloud_common</module>
+        <module>springcloud_user</module>
     </modules>
 
     <parent>
